@@ -33,5 +33,8 @@ class ProdutosController < ApplicationController
   def maquinas
     # Supondo que você tenha um campo "categoria" no modelo Produto
     @p = Produto.where(categoria: "Máquinas")
+    end
+  def cadastro
+
   end
 end
