@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get "/produtos", to: "produtos#index"
-  get "/produtos/new", to: "produtos#new"
+  get "/produtos", to: "produtos#produtos"
+  get "/preço", to: "produtos#preço"
   post "/produtos", to: "produtos#create"
   get "/produtos/:id", to: "produtos#show"
   get "/maquinas", to: "produtos#maquinas"

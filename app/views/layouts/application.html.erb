@@ -1,46 +1,50 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= content_for(:title) || "CGFescavações" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+<html lang="pt-br">
+<head>
+  <title><%= content_for(:title) || "CGFescavações" %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= yield :head %>
+  <%= yield :head %>
 
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%# Includes all stylesheet files in app/assets/stylesheets %>
+  <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body class="min-h-screen flex flex-col row">
 
-  <body>
-  <nav class="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+<!-- Barra de Navegação Fixa -->
+<div class="nav-container">
+  <nav class="bg-black fixed w-full z-20 top-0 left-0">
+    <div class="flex items-center justify-between mx-auto p-6">
       <a href="/produtos" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://scontent.fxap4-1.fna.fbcdn.net/v/t39.30808-1/305748984_508299811295156_6135710891999006004_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=wYeRy2K__8wQ7kNvgHXotE_&_nc_oc=AdjstRvBOqISFhQkUof5EXhnKwMcbTVVmjVgX3vq20f6TpoFD_QQxV7cZGEpeoOjdN4&_nc_zt=24&_nc_ht=scontent.fxap4-1.fna&_nc_gid=ACusijX9ie2Dm3EqXzVHdrD&oh=00_AYCCfjD5HiBqVPYnfQYoaXKW-imnm0yk0sxkOXV00b4EiA&oe=67677707" class="h-8" alt="CGF escavações Logo">
-        <span class="text-white self-center text-2xl font-semibold whitespace-nowrap">CGF escavações</span>
+        <img src="https://scontent.fxap4-1.fna.fbcdn.net/v/t39.30808-1/305748984_508299811295156_6135710891999006004_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=wYeRy2K__8wQ7kNvgHXotE_&_nc_oc=AdjstRvBOqISFhQkUof5EXhnKwMcbTVVmjVgX3vq20f6TpoFD_QQxV7cZGEpeoOjdN4&_nc_zt=24&_nc_ht=scontent.fxap4-1.fna&_nc_gid=ACusijX9ie2Dm3EqXzVHdrD&oh=00_AYCCfjD5HiBqVPYnfQYoaXKW-imnm0yk0sxkOXV00b4EiA&oe=67677707" class="h-12" alt="CGF escavações Logo">
+        <span class="text-white self-center text-2xl font-semibold whitespace-nowrap md:hover:bg-transparent md:hover:text-red-500">CGF escavações</span>
       </a>
-      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center ">Contratar</button>
+      <div class="hire-button-container flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <a href="/cadastro">
+          <button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-600 font-medium rounded-lg text-sm px-4 py-2 text-center">Contratar</button>
+        </a>
       </div>
-      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-        <ul class="flex flex-row p-4 md:p-0 mt-4 font-medium border border-gray- rounded-lg bg-gray-900 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+      <div class="menu-container items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-row p-4 md:p-0 mt-4 font-medium border border-red-700 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
           <li>
-            <a href="/maquinas" class="block text-white py-2 px-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Máquinas</a>
+            <a href="/maquinas" class="block text-white py-2 px-3 md:hover:bg-transparent md:hover:text-red-500 md:p-0">Máquinas</a>
           </li>
           <li>
-            <a href="/produtos/new" class="block text-white py-2 px-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Preço Hora</a>
+            <a href="/preço" class="block text-white py-2 px-3 md:hover:bg-transparent md:hover:text-red-500 md:p-0">Preço Hora</a>
           </li>
           <li>
             <a href="/produtos" class="block text-white py-2 px-3 md:hover:bg-transparent md:hover:text-red-500 md:p-0">Contato</a>
@@ -49,13 +53,60 @@
       </div>
     </div>
   </nav>
+</div>
+<!-- Fim da Barra de Navegação -->
 
-  <footer> </footer>
+<!-- Conteúdo Principal -->
+<div class="flex-grow pt-36"> <!-- pt-16 garante que o conteúdo não fique embaixo da navegação -->
+  <%= yield %>
+</div>
+<!-- Fim do Conteúdo Principal -->
 
-
-  <div class="mt-24 container-fluid">
-    <%= yield %>
+<!-- Rodapé -->
+<footer class="footer-container bg-black text-white py-4 mt-autobg-gray-900">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <div class="md:flex md:justify-between">
+      <div class="mb-6 md:mb-0">
+        <a href="/produtos" class="flex items-center">
+          <img src="https://scontent.fxap4-1.fna.fbcdn.net/v/t39.30808-1/305748984_508299811295156_6135710891999006004_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=wYeRy2K__8wQ7kNvgHXotE_&_nc_oc=AdjstRvBOqISFhQkUof5EXhnKwMcbTVVmjVgX3vq20f6TpoFD_QQxV7cZGEpeoOjdN4&_nc_zt=24&_nc_ht=scontent.fxap4-1.fna&_nc_gid=ACusijX9ie2Dm3EqXzVHdrD&oh=00_AYCCfjD5HiBqVPYnfQYoaXKW-imnm0yk0sxkOXV00b4EiA&oe=67677707" class="h-20" alt="CGF escavações Logo" />
+          <span class="text-white self-center text-2xl font-semibold whitespace-nowrap md:hover:bg-transparent md:hover:text-red-500">CGF escavações</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-white uppercase">Redes Sociais </h2>
+          <ul class="text-gray-500">
+            <li class="mb-4">
+              <a href="https://www.facebook.com/cgfescavacoes/?locale=pt_BR" class="hover:underline ">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fcgf.escavacoes%2F&is_from_rle" class="hover:underline">Instagram</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
+          <ul class="text-gray-500 ">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Políticas Privadas</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Termos  &amp; Condições</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2020 CGF escavações. Todos os registros
+          </span>
+      <div class="flex mt-4 sm:justify-center sm:mt-0">
+      </div>
+    </div>
   </div>
+</footer>
+<!-- Fim do Rodapé -->
 
-  </body>
+</body>
 </html>

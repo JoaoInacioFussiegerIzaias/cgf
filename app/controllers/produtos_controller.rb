@@ -1,10 +1,9 @@
 class ProdutosController < ApplicationController
-  def index
+  def produtos
     @p = Produto.all
   end
 
-  def new
-    @p = Produto.new
+  def preço
   end
 
   def create
