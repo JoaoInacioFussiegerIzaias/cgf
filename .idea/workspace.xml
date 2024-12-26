@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e768012-7102-4f44-bd87-452ce45b0ffb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/produtos/preço.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/produtos/produtos.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/definitivo site.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/definitivo site.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/produtos/new.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/produtos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/produtos_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/produtos/cadastro.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/produtos/cadastro.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/produtos/index.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/produtos/maquinas.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/produtos/maquinas.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/produtos/new.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/produtos/show.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/produtos/show.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/produtos/produtos.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/produtos/produtos.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +144,9 @@
       <workItem from="1734518828517" duration="18224000" />
       <workItem from="1734696672938" duration="196000" />
       <workItem from="1734696874663" duration="16156000" />
-      <workItem from="1734951406488" duration="19166000" />
+      <workItem from="1734951406488" duration="20135000" />
+      <workItem from="1735210033766" duration="6928000" />
+      <workItem from="1735230097916" duration="1529000" />
     </task>
     <servers />
   </component>
